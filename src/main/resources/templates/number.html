@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Generator</title>
+</head>
+
+<body>
+    <h1>Hello <span data-th-text="${name}"></span></h1>
+    <h1>These are your <span th:text="${count}"></span> lucky numbers!</h1>
+
+
+    <table>
+        <tr>
+            <!--for each pic in pictures-->
+            <td th:each="pic : ${pictures}">
+                <img th:src="@{${pic}}" alt="Image" style="width: 100%; height: 300px; object-fit: contain;">
+            </td>
+        </tr>
+    </table>
+
+
+    <div>
+        <a href="/">
+            <h3>Back</h3>
+        </a>
+    </div>
+</body>
+
+</html>
